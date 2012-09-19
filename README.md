@@ -6,13 +6,13 @@ jQuery Voter Plugin
 Basic Usage
 -------------
 
-<code>$(selector).attachVoter({ options });</code>
+<code>$(selectors).attachVoter({ options });</code>
 
 With Up/Down Vote Callbacks
 -------------
 
 <pre>
-	$("#list li").attachVoter({
+	$(selectors).attachVoter({
 		"doUpVote": function(id, value) {
 			//
 		},
