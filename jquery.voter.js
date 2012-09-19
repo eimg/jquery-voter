@@ -2,7 +2,7 @@
  * jQuery Voter Plugin
  * Author: Ei Maung (Fairway Web)
  * License: The MIT License (MIT)
- * Usage and Demo: http://fairwayweb.com/jquery-voter-plugin/
+ * Release Note: http://fairwayweb.com/jquery-voter-plugin/
  * Version: 0.1, 20 Sep, 2012
  */
 
@@ -67,6 +67,8 @@
 
 		}).click(function() {
 
+			var updatedValue;
+
 			if( voter.data("state") == 0 ) {
 
 				// Up Vote
@@ -75,14 +77,15 @@
 
 				downVoter.addClass($options.disabledClass);
 
-				voteCount.text( parseInt(voteCount.text()) + 1 );
+				updatedValue = parseInt(voteCount.text()) + 1;
+				voteCount.text( updatedValue );
 				voter.data("state", 1);
 
 				// Set cookie to be persistent this up vote
 				if($options.useCookie) setCookie("voted-" + id, "1", 30);
 
 				// Apply user callback
-				$options.doUpVote(id);
+				$options.doUpVote(id, updatedValue);
 
 			} else if ( voter.data("state") == 1 ) {
 
@@ -92,14 +95,15 @@
 
 				downVoter.removeClass($options.disabledClass);
 
-				voteCount.text( parseInt(voteCount.text()) - 1 );
+				updatedValue = parseInt(voteCount.text()) - 1;
+				voteCount.text( updatedValue );
 				voter.data("state", 0);
 
 				// Remove cookie to clear this up vote
 				if($options.useCookie) deleteCookie("voted-" + id);
 
 				// Apply user callback
-				$options.undoUpVote(id);
+				$options.undoUpVote(id, updatedValue);
 
 			}
 
@@ -129,6 +133,8 @@
 
 		}).click(function(){
 
+			var updatedValue;
+
 			if( voter.data("state") == 0 ) {
 
 				// Down Vote
@@ -137,14 +143,15 @@
 
 				upVoter.addClass($options.disabledClass);
 
-				voteCount.text( parseInt(voteCount.text()) - 1 );
+				updatedValue = parseInt(voteCount.text()) - 1;
+				voteCount.text( updatedValue );
 				voter.data("state", -1);
 
 				// Set cookie to be persistent this down vote
 				if($options.useCookie) setCookie("voted-" + id, "-1", 30);
 
 				// Apply user callback
-				$options.doDownVote(id);
+				$options.doDownVote(id, updatedValue);
 
 			} else if ( voter.data("state") == -1 ) {
 
@@ -154,14 +161,15 @@
 
 				upVoter.removeClass($options.disabledClass);
 
-				voteCount.text( parseInt(voteCount.text()) + 1 );
+				updatedValue = parseInt(voteCount.text()) + 1;
+				voteCount.text( updatedValue );
 				voter.data("state", 0);
 
 				// Remove cookie to clear this down vote
 				if($options.useCookie) deleteCookie("voted-" + id);
 
 				// Apply user callback
-				$options.undoDownVote(id);
+				$options.undoDownVote(id, updatedValue);
 
 			}
 

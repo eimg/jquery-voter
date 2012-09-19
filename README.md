@@ -3,10 +3,30 @@ jQuery Voter Plugin
 
 > A simple jQuery plugins to attach up/down voting functionality to selected HTML element.
 
-Usage
+Basic Usage
 -------------
 
 <code>$(selector).attachVoter({ options });</code>
+
+With Up/Downvote Callbacks
+-------------
+
+<code>
+	$("#list li").attachVoter({
+		"doUpVote": function(id, value) {
+			//
+		},
+		"doDownVote": function(id, value) {
+			//
+		},
+		"undoUpVote": function(id, value) {
+			//
+		},
+		"undoDownVote": function(id, value) {
+			//
+		}
+	});
+</code>
 
 Options
 -------------
@@ -31,6 +51,6 @@ Options
 * "undoUpVote"      : function() {},
 * "undoDownVote"    : function() {}
 
-Demo
+Release Note
 -------------
 * [http://fairwayweb.com/jquery-voter-plugin/](http://fairwayweb.com/jquery-voter-plugin/)
