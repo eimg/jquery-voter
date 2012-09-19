@@ -8,7 +8,7 @@ Basic Usage
 
 <code>$(selector).attachVoter({ options });</code>
 
-With Up/Downvote Callbacks
+With Up/Down Vote Callbacks
 -------------
 
 <pre>
