@@ -1,0 +1,55 @@
+#list li {
+	overflow: hidden;
+	width: 460px;
+	border-bottom: 1px solid #ddd;
+}
+
+.voter-wrapper {
+	font: 14px/60px Arial, Helvetica, sans-serif;
+	float: left;
+	width: 400px;
+}
+.voter {
+	display: block;
+	float: right;
+	width: 35px;
+	line-height: 20px;
+}
+
+.up-vote,
+.down-vote,
+.vote-count {
+	display: block;
+	text-align: center;
+}
+
+.up-vote, .down-vote {
+	cursor: pointer;
+	font-size: 20px;
+}
+.up-vote:hover, .down-vote:hover {
+	color: red;
+}
+
+.up-vote.voted, .down-vote.voted {
+	color: orange;
+}
+
+.up-vote.disabled, .down-vote.disabled {
+	color: #999;
+	cursor: default;
+}
+
+.vote-count {
+	background: lightyellow;
+	border: 1px solid #dd8;
+	border-radius: 5px;
+	color: #666;
+}
+
+.good {
+	color: #090;
+}
+.bad {
+	color: #900;
+}

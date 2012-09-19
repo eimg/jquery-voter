@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Vote Demo</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.voter.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$("#list li").attachVoter();
+		});
+	</script>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<ul id="list">
+		<li data-id="1" data-value="0">Item One</li>
+		<li data-id="2" data-value="3">Item Two</li>
+		<li data-id="3">Item Three</li>
+		<li data-id="4" data-value="-2">Item Four</li>
+		<li data-id="5">Item Five</li>
+	</ul>
+</body>
+</html>
