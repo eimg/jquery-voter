@@ -11,7 +11,7 @@ Basic Usage
 With Up/Downvote Callbacks
 -------------
 
-<code>
+<pre>
 	$("#list li").attachVoter({
 		"doUpVote": function(id, value) {
 			//
@@ -26,7 +26,7 @@ With Up/Downvote Callbacks
 			//
 		}
 	});
-</code>
+</pre>
 
 Options
 -------------
