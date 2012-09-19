@@ -3,29 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>jQuery Vote Demo</title>
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.voter.min.js"></script>
+	<script src="jquery.js"></script>
+	<script src="jquery.voter.min.js"></script>
 
-	<script type="text/javascript">
+	<script>
 		$(function() {
-			// Basic Setup
 			$("#list li").attachVoter();
-
-			// Callback on Up/Down Vote
-			/*$("#list li").attachVoter({
-				"doUpVote": function(id, value) {
-					//
-				},
-				"doDownVote": function(id, value) {
-					//
-				},
-				"undoUpVote": function(id, value) {
-					//
-				},
-				"undoDownVote": function(id, value) {
-					//
-				}
-			});*/
 		});
 	</script>
 
